@@ -1,0 +1,40 @@
+name: バグレポート
+description: バグが発生したときに使用するissueテンプレートです。
+title: "[バグ] xx"
+labels: ["bug"]
+assignees: []
+
+body:
+  - type: textarea
+    attributes:
+      label: バグの詳細
+      value: |
+        ## バグの詳細を記載してください。
+  - type: textarea
+    attributes:
+      label: バグの再現手順（あれば）
+      value: |
+        ## バグを再現する手順を記載してください。
+  - type: input
+    attributes:
+      label: 期待される結果
+      description: 期待される結果を記載してください。
+      placeholder: 例）ボタンを押すと、画面が表示される。
+  - type: input
+    attributes:
+      label: 実際の結果
+      description: 実際の結果を記載してください。
+      placeholder: 例）ボタンを押すと、エラーが表示される。
+  - type: checkboxes
+    attributes:
+      label: 発生環境
+      description: バグが発生したときの環境を記載してください。
+      options:
+        - label: 本番環境
+        - label: ステージング環境
+        - label: 開発環境
+  - type: textarea
+    attributes:
+      label: その他
+      value: |
+        ## その他、バグに関する情報を記載してください。
