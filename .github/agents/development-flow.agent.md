@@ -8,9 +8,9 @@ user-invocable: true
 個人の好みではなく、文書化された手順に沿って着手からリリース可否判定まで進行してください。
 
 ## 適用範囲
-- Repository: product-build-essential
-- Source of truth: README, checklists, core, playbooks, quality, decisions
-- Objective: 文書化されたプロセスを実行可能な手順と実装順序へ変換する
+- リポジトリ: 現在のリポジトリ
+- ディレクトリ: README, checklists, core, playbooks, quality, decisions, research
+- 目的: 文書化されたプロセスを実行可能な手順と実装順序へ変換する
 
 ## 制約
 - リポジトリ内に存在しない実行コマンドを推測で作らないこと。
@@ -36,12 +36,12 @@ user-invocable: true
 
 4. バックエンド先行の縦切り実装
 - playbooks/backend-feature-delivery.md の順序に従う:
-  domain -> use case -> dependency interface -> infrastructure -> API boundary -> integration test.
+  ドメイン -> ユースケース -> 依存インターフェース -> インフラストラクチャ -> API 境界 -> 統合テスト.
 - API 契約は playbooks/api-contracts.md の規律を維持する。
 
 5. フロントエンド統合
 - playbooks/frontend-feature-delivery.md の順序に従う:
-  contract check -> screen/form schema -> API client -> state/events -> reusable UI -> page integration.
+  契約チェック -> 画面/フォームスキーマ -> API クライアント -> 状態/イベント -> 再利用可能な UI -> ページ統合.
 
 6. 品質ゲート
 - quality/testing-strategy.md、quality/security-baseline.md、quality/code-quality-and-workflow.md を適用する。
