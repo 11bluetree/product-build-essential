@@ -18,10 +18,12 @@
 
 1. 新規プロジェクトの開始時は `docs/checklists/project-bootstrap.md` から確認する
 2. 設計の方向性を固めるときは `docs/core/` を読む
-3. 機能追加の進め方を決めるときは `docs/playbooks/` を使う
-4. 品質・セキュリティの最低基準は `docs/quality/` を参照する
-5. 技術判断は `docs/decisions/adr-template.md` で記録する
-6. 選定や設計の調査メモは `research/README.md` の運用ルールに従って記録する
+3. 技術判断は `docs/decisions/adr-template.md` で記録する
+4. 選定や設計の調査メモは `research/README.md` の運用ルールに従って記録する
+5. 機能の詳細設計は `docs/design-doc/` に記録し、実装前にレビューを受ける
+   - テンプレートは `docs/playbooks/design-doc-template.md` を参照
+6. 機能追加の進め方を決めるときは `docs/playbooks/` を使う
+7. 品質・セキュリティの最低基準は `docs/quality/` を参照する
 
 ## 開発フロー
 
@@ -35,13 +37,17 @@
    - `docs/core/domain-and-data-modeling.md` でドメイン、API 契約、永続化、UI モデルの境界を決める
 4. **技術判断の記録**
    - 主要な選定事項を `docs/decisions/adr-template.md` で ADR 化する
-5. **機能の縦切り実装（バックエンド先行）**
+5. **詳細設計（実装前）**
+   - `docs/design-doc/[feature-name]/` に設計ドキュメントを作成する
+   - テンプレートは `docs/playbooks/design-doc-template.md` を参照
+   - 設計完了後、PR でレビューを受ける
+6. **機能の縦切り実装（バックエンド先行）**
    - `docs/playbooks/backend-feature-delivery.md` と `docs/playbooks/api-contracts.md` に沿って 1 機能を端から端まで実装する
-6. **フロントエンド統合**
+7. **フロントエンド統合**
    - `docs/playbooks/frontend-feature-delivery.md` に沿って UI と状態管理を分離して接続する
-7. **品質ゲートの適用**
+8. **品質ゲートの適用**
    - `docs/quality/testing-strategy.md`、`docs/quality/security-baseline.md`、`docs/quality/code-quality-and-workflow.md` を機能ごとに適用する
-8. **完了確認とリリース確認**
+9. **完了確認とリリース確認**
    - `docs/checklists/feature-delivery.md` で機能完了を確認し、`docs/checklists/release-readiness.md` でリリース可否を判断する
 
 この流れは、`設計を先に固定 -> 小さく実装 -> 品質で締める` を繰り返す運用を前提としている。
@@ -51,6 +57,7 @@
 - `apps/` : アプリケーションコードの配置場所（例: `frontend/`、`backend/`、`client/`、`api/`）
 - `docs/` : プロダクト開発のドキュメント群
    - `core/` : プロダクト設計の中核原則
+   - `design-doc/` : 機能ごとの詳細設計書（実装前）
    - `playbooks/` : 実装を進めるときの順序と責務分担
    - `quality/` : テスト、セキュリティ、コード品質の基準
    - `decisions/` : アーキテクチャ判断の記録方法
