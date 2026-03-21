@@ -21,7 +21,7 @@
 3. 機能追加の進め方を決めるときは `docs/playbooks/` を使う
 4. 品質・セキュリティの最低基準は `docs/quality/` を参照する
 5. 技術判断は `docs/decisions/adr-template.md` で記録する
-6. 選定や設計の調査メモは `docs/research/README.md` の運用ルールに従って記録する
+6. 選定や設計の調査メモは `research/README.md` の運用ルールに従って記録する
 
 ## 開発フロー
 
@@ -55,12 +55,12 @@
    - `quality/` : テスト、セキュリティ、コード品質の基準
    - `decisions/` : アーキテクチャ判断の記録方法
    - `checklists/` : 着手前、実装前、リリース前の確認項目
-   - `research/` : 選定と設計のための調査記録
+- `research/` : 一時的な選定・設計調査の記録
 
 ## 調査の記録場所
 
-技術選定、設計比較、前提確認などの調査は `docs/research/` に記録する。
-運用ルールは `docs/research/README.md` を参照する。
+技術選定、設計比較、前提確認などの調査は `research/` に記録する。
+運用ルールは `research/README.md` を参照する。
 
 ## 基本姿勢
 
