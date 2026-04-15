@@ -16,6 +16,7 @@
 
 ## 開発基盤
 
+- 本開発に入る前に `docs/checklists/development-stack-readiness.md` を満たしている
 - 型チェックの仕組みがある
 - 静的解析の仕組みがある
 - テスト実行基盤がある

@@ -27,6 +27,7 @@
    - `docs/core/domain-and-data-modeling.md` でドメイン、API 契約、永続化、UI モデルの境界を決める
 4. **技術判断の記録**
    - 主要な選定事項を `docs/decisions/adr-template.md` で ADR 化する
+   - POC 後に本開発へ進む前提として `docs/checklists/development-stack-readiness.md` を確認する
 5. **詳細設計（実装前）**
    - `docs/design-doc/[feature-name]/` に設計ドキュメントを作成する
    - テンプレートは `docs/playbooks/design-doc-template.md` を参照
