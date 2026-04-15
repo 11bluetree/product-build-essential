@@ -25,10 +25,21 @@
 6. 機能追加の進め方を決めるときは `docs/playbooks/` を使う
 7. 品質・セキュリティの最低基準は `docs/quality/` を参照する
 
+## 利用可能な自動化
+
+| 種類 | ファイル | 用途 |
+|------|----------|------|
+| エージェント | `.github/agents/development-flow.agent.md` | 開発フロー全体の進行管理（着手〜リリース判定） |
+| プロンプト | `.github/prompts/create-conventional-branch-name.prompt.md` | Conventional ブランチ名の生成とブランチ作成 |
+| プロンプト | `.github/prompts/create-pr.prompt.md` | Pull Request の作成 |
+| スキル | `.github/skills/dev-environment-check/SKILL.md` | 開発環境の品質チェック |
+
 ## 開発フロー
 
 実際に開発を進めるときは、以下の順で進める。
 
+0. **ブランチ作成**
+   - `.github/prompts/create-conventional-branch-name.prompt.md` の命名規則と手順でブランチを作成する
 1. **着手準備**
    - `docs/checklists/project-bootstrap.md` を使って、目的、非対象、成功指標を定義する
 2. **設計原則の固定**
@@ -37,6 +48,7 @@
    - `docs/core/domain-and-data-modeling.md` でドメイン、API 契約、永続化、UI モデルの境界を決める
 4. **技術判断の記録**
    - 主要な選定事項を `docs/decisions/adr-template.md` で ADR 化する
+   - POC 終了後は `docs/checklists/development-stack-readiness.md` で本開発移行の準備を確認する
 5. **詳細設計（実装前）**
    - `docs/design-doc/[feature-name]/` に設計ドキュメントを作成する
    - テンプレートは `docs/playbooks/design-doc-template.md` を参照
