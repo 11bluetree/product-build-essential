@@ -32,6 +32,7 @@
 | エージェント | `.github/agents/development-flow.agent.md` | 開発フロー全体の進行管理（着手〜リリース判定） |
 | プロンプト | `.github/prompts/create-conventional-branch-name.prompt.md` | Conventional ブランチ名の生成とブランチ作成 |
 | プロンプト | `.github/prompts/create-pr.prompt.md` | Pull Request の作成 |
+| プロンプト | `.github/prompts/check-stack-readiness.prompt.md` | 技術選定完了確認と不足 ADR の一覧化 |
 | スキル | `.github/skills/dev-environment-check/SKILL.md` | 開発環境の品質チェック |
 
 ## 開発フロー
